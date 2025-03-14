@@ -12,8 +12,8 @@ const speed=7;
 let a=1,b=19;
 let food={x:3,y:6};
 let score=0,highscore=0;
-window.addEventListener('keydown',(event)=>
-{
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('keydown', (event) => {
     //here event.key returns the key value which is pressed 
     switch(event.key)
     {
@@ -36,6 +36,9 @@ window.addEventListener('keydown',(event)=>
         default:
             break;
     }
+});
+    const gameCanvas = document.getElementById('gameCanvas');
+    gameCanvas.focus();
 });
 //here the main logic of game starts
 function main(curr)
